@@ -4,43 +4,67 @@
 		<meta charset="utf-8">
 		<title>MOKEPON!</title>
         <script src="./js/mokepon.js"></script>
+        <link rel="stylesheet" href="./style.css">
 	</head>
 	<body>
-		<h1>MOKEPON!</h1>      
+        <section id = "Seleccionar-mascota">
+            <h1 class="titulo">MOKEPON!</h1>      
 
-            <section id = "Seleccionar-mascota">
-                <h2>Elige tu mascota:</h2>
-                <label for = "Oshawott">Oshawott</label>
+            <h2 class ="subtitulo">Elige tu mascota:</h2>
+
+            <div class = "tarjetas">
+                <label class = "tarjeta-de-mokepon" for = "Oshawott">
+                    <p>Oshawott</p>
+                    <img src="./assets/Oshawott.png" alt="Oshawott">
+                </label>
                 <input type = "radio" name = "mascota" id = "Oshawott"/>
-
-                <label for = "Snivy">Snivy</label>
+    
+                <label class = "tarjeta-de-mokepon" for = "Snivy">
+                    <p>Snivy</p>
+                    <img src="./assets/Snivy.png" alt="Snivy">
+                </label>
                 <input type = "radio" name = "mascota" id = "Snivy"/>
-
-                <label for = "Tepig">Tepig</label>
+    
+                <label for class = "tarjeta-de-mokepon" for = "Tepig">
+                    <p>Tepig</p>
+                    <img src="./assets/Tepig.png" alt="Tepig">
+                </label>
                 <input type = "radio" name = "mascota" id = "Tepig"/>
+            </div>
 
-                <button id = "seleccionar-mascota">Seleccionar</button>
-            </section>
+            <button id = "seleccionar-mascota">Seleccionar</button>
+        </section>
 
-            <section id = "Seleccionar-ataque">
-                <h2>Elige tu ataque:</h2>
+        <section id = "Seleccionar-ataque">
+            <h1 class="titulo">MOKEPON!</h1>
 
-                <p>Tu mascota tiene <span>3</span> vidas</p>
-                <p>La mascota de tu rival tiene <span>3</span> vidas</p>
-                <p>
-                    <button id = "fuego">FUEGO</button>
-                    <button id = "agua">AGUA</button>
-                    <button id = "planta">PLANTA</button>
-                </p>
-            </section>
+            <h2 class = "subtitulo">Elige tu ataque:</h2>
+                
+            <div>
+                <button id = "boton_fuego" class="boton_de_ataque">FUEGO</button>
+                <button id = "boton_agua" class="boton_de_ataque">AGUA</button>
+                <button id = "boton_planta" class="boton_de_ataque">PLANTA</button>
+            </div>
+            <div id = "mensaje">
+                <p id="resultado">TU RIVAL ESTA ESPERANDO</p>
 
-            <section id = "mensaje">
-                <p></p>
-            </section>
+                <section id = "reiniciar">
+                    <button id = "boton-reiniciar">Reiniciar</button>
+                </section>
+            </div>
 
-            <section id = "reiniciar">
-                <button id = "boton-reiniciar">Reiniciar</button>
-            </section>
-
+            <div class="ataques">
+                <div>
+                    <p id="mascota_jugador"></p>
+                    <p id="vidas_jugador"></p>
+                    <div id = "ataques_del_jugador"></div>
+                </div>
+                <div>
+                    <p id="mascota_enemigo"></p>
+                    <p id="vidas_enemigo"></p>
+                    <div id = "ataques_del_enemigo"></div>
+                </div>
+            </div>
+        </section>
 	</body>
 </html>
