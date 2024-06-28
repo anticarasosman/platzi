@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MOKEPON!</title>
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+        <section id = "Seleccionar-mascota">
+            <h1 class="titulo">MOKEPON!</h1>      
+
+            <h2 class ="subtitulo">Elige tu mascota:</h2>
+
+            <div id = "contenedorTarjetas" class = "tarjetas">
+
+            </div>
+
+            <button id = "seleccionar-mascota">Seleccionar</button>
+        </section>
+
+        <section id="ver_mapa">
+            <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+            <div id="botones-movimiento">
+                <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+            </div>
+        </section>
+
+        <section id = "Seleccionar-ataque">
+            <h1 class="titulo">MOKEPON!</h1>
+
+            <h2 class = "subtitulo">Elige tu ataque:</h2>
+                
+            <div id="contenedorAtaques" class="tarjetas_ataques">
+            </div>
+            <div id = "mensaje">
+                <p id="resultado">TU RIVAL ESTA ESPERANDO</p>
+            </div>
+
+            <div class="ataques">
+                <div class = "ataques_jugador">
+                    <p id="mascota_jugador"></p>
+                    <p id="vidas_jugador">0</p>
+                    <div id = "ataques_del_jugador"></div>
+                </div>
+                <div class = "ataques_enemigo">
+                    <p id="mascota_enemigo"></p>
+                    <p id="vidas_enemigo">0</p>
+                    <div id = "ataques_del_enemigo"></div>
+                </div>
+                <section id = "reiniciar">
+                    <button id = "boton-reiniciar">Reiniciar</button>
+                </section>
+            </div>
+        </section>
+        <script src="./js/mokepon.js"></script>
+	</body>
+</html>

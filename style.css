@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+body {
+    font-family: "Pixelify Sans", cursive;
+    background-color: blue;
+}
+
+#Seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: yellow;
+    font-size: 32px;
+}
+
+.subtitulo{
+    color: yellow;
+    font-size: 20px;
+}
+
+.tarjetas, .tarjetas_ataque{
+    display: flex;
+    gap: 10px;
+}
+
+.tarjeta-de-mokepon{
+    color: yellow;
+    width: 150px;
+    height: 100px;
+    background: rgb(60, 88, 243);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid hotpink;
+    border-radius: 20px;
+    display: flex;
+}
+
+.tarjeta-de-mokepon img{
+    width: 60px;
+    height: 60px
+}
+
+#seleccionar-mascota{
+    margin-top: 30px;
+    font-family: "Pixelify Sans", cursive;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid yellow;
+    color: yellow;
+
+}
+
+#Seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton_de_ataque{
+    background-color: rgb(60, 88, 243);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 80px;
+    font-family: "Pixelify Sans", cursive;
+    color: yellow;
+}
+
+#boton-reiniciar {
+    flex-direction: column;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
+#mensaje{
+    width: 280px;
+    background: rgb(57, 182, 182);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    background-color: red;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color: yellow;
+}
+
+#vidas_jugador, #vidas_enemigo{
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.ataques_jugador, .ataques_enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ver_mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver_mapa button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid yellow;
+    color: yellow;
+    font-family: "Pixelify Sans", cursive;
+    margin: 10px 0px;
+}
+
+#mapa{
+    border: 2px solid yellow;
+}
+
+@media (max-width: 500px){
+    .tarjetas, .tarjetas_ataque{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px){
+    #ver_mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
